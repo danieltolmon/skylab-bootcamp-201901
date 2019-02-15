@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "express-session": "^1.15.6",
     "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
