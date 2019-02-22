@@ -1,0 +1,58 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Supernova\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js test
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Supernova\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;D:\Programas\runtime\win64;D:\Programas\bin;C:\Program Files\MATLAB\R2014a\runtime\win64;C:\Program Files\MATLAB\R2014a\bin;C:\Program Files\MATLAB\R2014a\polyspace\bin;C:\Program Files (x86)\Skype\Phone;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Users\Supernova\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Users\Supernova\AppData\Roaming\npm
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  10.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\Supernova\bootcamp\collab\skylab-bootcamp-201901\staff\daniel-toledo\spotify-api\package.json: Unexpected token } in JSON at position 370
+      at JSON.parse (<anonymous>)
+      at C:\Users\Supernova\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Supernova\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:304:30)
+      at C:\Users\Supernova\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "rest-api",
+    "version": "1.4.0",
+    "description": "## server",
+    "main": "index.js",
+    "scripts": {
+      "start": "node src",
+      "watch": "nodemon src",
+      "debug": "node debug src",
+      "test": "mocha src/**/*.spec.js",
+      "test-debug": "mocha debug src/**/*.spec.js",
+      "test-coverage": "nyc --reporter=html --reporter=text mocha src/**/*.spec.js",
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.18.3",
+      "dotenv": "^6.2.0",
+      "express": "^4.16.4",
+      "isomorphic-fetch": "^2.2.1",
+      "nodemon": "^1.18.10",
+      "uuidv4": "^3.0.1"
+    },
+    "devDependencies": {
+      "expect": "^24.1.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
