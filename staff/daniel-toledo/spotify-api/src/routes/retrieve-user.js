@@ -2,7 +2,7 @@ const logic = require('../logic')
 
 module.exports = (req, res) => {
     const { params: { id }, headers: { authorization } } = req
-
+debugger
     const token = authorization.substring(7)
 
     try {

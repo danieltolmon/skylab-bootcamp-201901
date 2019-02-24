@@ -134,7 +134,6 @@ const logic = {
         return users.remove(userId)
     },
 
-
     /**
      * Search artists.
      * 
@@ -154,18 +153,20 @@ const logic = {
      * 
      * @param {string} artistId 
      */
-    retrieveArtist(artistId) {
+    retrieveArtist(artistId, userId) {
         if (typeof artistId !== 'string') throw TypeError(`${artistId} is not a string`)
 
         if (!artistId.trim().length) throw Error('artistId is empty')
 
         return spotifyApi.retrieveArtist(artistId)
- 
-        .then(artist =>
-            artistComments.find({ artistId: artist.id })
-                .then(comments => artist.comments = comments)
-                .then(() => artist)
-        )
+            .then(artist =>
+                artistComments.find({ artistId: artist.id })
+                    .then(comments => artist.comments = comments)
+                    .then(()=>users.findByUserId(userId))
+                    .then( user => artist.favorite= user.favoritesAArtist.find(artistId))
+                    .then(() => artist)
+            )
+
     },
 
     /**
